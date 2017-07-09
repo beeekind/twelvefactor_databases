@@ -1,0 +1,16 @@
+language: go
+sudo: false
+
+go:
+  # use the master branch of Golang
+  - master
+
+# install glide and use it to gather our dependencies
+install:
+   - go get -v github.com/Masterminds/glide
+   - cd $GOPATH/src/github.com/Masterminds/glide && go install && cd -
+   - glide install
+
+script:
+  - go test ./ping
+  - go test ./users

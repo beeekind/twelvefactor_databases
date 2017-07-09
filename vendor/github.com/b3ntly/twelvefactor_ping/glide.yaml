@@ -1,0 +1,8 @@
+package: github.com/b3ntly/twelvefactor_ping
+import:
+- package: github.com/stretchr/testify
+  version: ^1.1.4
+  subpackages:
+  - require
+- package: github.com/TV4/env
+  version: ^0.1.0
