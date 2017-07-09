@@ -24,9 +24,9 @@ These are configuration variables that can be passed to the docker container.
 | REQ_TIMEOUT | Request Timeout in Milliseconds | 500 |
 | SERVER_READ_TIMEOUT | Server Read Timeout in Milliseconds | 1000 |
 | SERVER_WRITE_TIMEOUT | Server Write Timeout in Milliseconds | 2000 |
-| DB_CONN_MAX_LIFETIME | Max duration of a database timeout | 0 a.k.a. unlimited |
-| DB_MAX_OPEN | Max open database connections | 0 a.k.a. unlimited |
+| DB_CONN_MAX_LIFETIME | Max duration of a database timeout | unlimited |
+| DB_MAX_OPEN | Max open database connections | unlimited |
 | DB_MAX_IDLE | Max idle database connections | 2 |
 | POSTGRES_URI | Database connection URI | postgresql://postgres@localhost:5432/postgres?sslmode=disable |
-| USERS_PATH | Path to expose the users service | users a.k.a. /users |
+| USERS_PATH | Path to expose the users service | /users |
 | USERS_SELECT_LIMIT | The number of users to return from a GET request to the USERS_PATH | 10 |
