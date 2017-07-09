@@ -6,6 +6,7 @@ import (
 	"github.com/gorilla/mux"
 	"log"
 	"net/http"
+	"path/filepath"
 )
 
 // Service contains an HTTP endpoint for ping/pong functionality
@@ -29,7 +30,7 @@ type (
 // New: inject dependencies via an explicit constructor. Though sometimes people will read environmental variables or
 // initialize defaults here I prefer to do so explicitly within the program entry-point.
 func New(config *Config) *Service {
-	return &Service{ctx: config.Ctx, pingPath: config.PingPath, pingResponse: config.PingResponse, logger: config.Logger}
+	return &Service{ctx: config.Ctx, pingPath: filepath.Join("/", config.PingPath), pingResponse: config.PingResponse, logger: config.Logger}
 }
 
 //

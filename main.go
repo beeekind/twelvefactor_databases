@@ -120,7 +120,7 @@ func main() {
 	// Instantiate the service(s) with requisite configurations.
 	services := []Service{
 		ping.New(&ping.Config{
-			PingPath:     filepath.Join("/", env.PingPath),
+			PingPath:     env.PingPath,
 			PingResponse: env.PingResponse,
 			Logger:       logger,
 		}),
